@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- daisy ui link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- icon link -->
+    <script src="https://kit.fontawesome.com/8cdef2cb71.js" crossorigin="anonymous"></script>
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <!-- font style -->
+    <style>
+      .inter-font {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+</head>
+<body class="container mx-auto px-4 py-2 inter-font bg-black h-screen">
+    <nav>
+        <!-- nev-container -->
+        <div class="flex justify-between">
+            <!-- left site item -->
+            <!-- drawer -->
+            <div class="flex items-center gap-4">
+                <div class="drawer z-10">
+                    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                    <div class="drawer-content">
+                      <!-- Page content here -->
+                      <label for="my-drawer" class="btn bg-[#272829] border border-[#272829] rounded-full drawer-button"><i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+                      </label>
+                    </div> 
+                    <div class="drawer-side">
+                      <label for="my-drawer" class="drawer-overlay"></label>
+                      <ul class=" menu p-4 w-80 min-h-full bg-[#272829] text-base-content">
+                        <!-- Sidebar content here -->
+                        <nav>
+                            <div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <img class="h-12 w-12 rounded-full" src="images/IMG_5757-01-01.jpeg" alt="">
+                                    <details class="dropdown mb-32">
+                                        <summary class="btn normal-case text-xl bg-[#272829] text-white border border-[#272829]">MD Arman <i class="fa-solid fa-chevron-down" style="color: #ffffff;"></i></summary>
+                                        <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-56 space-y-2">
+                                            <!-- 1 -->
+                                            <div class="flex justify-between items-center">
+                                                <div class="flex items-center gap-1">
+                                                    <img class="h-12 w-12 rounded-full" src="images/IMG_5757-01-01.jpeg" alt="">
+                                                    <div>
+                                                        <h1 class="text-lg font-semibold">MD Arman</h1>
+                                                        <p class="text-xs text-gray-600">Signed in</p>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-check fa-xl";"></i>
+                                            </div>
+                                            <!-- 2 -->
+                                            <div class="flex justify-between items-center">
+                                                <div class="flex items-center gap-1">
+                                                    <img class="h-12 w-12 rounded-full" src="images/IMG_3709__02.jpg" alt="">
+                                                    <div>
+                                                        <h1 class="text-lg font-semibold">Shahriar Salam</h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 3 -->
+                                            <div class="flex justify-between items-center">
+                                                <div class="flex items-center gap-1">
+                                                    <button class="btn bg-[#272829] border border-[#272829] rounded-full">
+                                                        <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+                                                    </button>
+                                                    <div>
+                                                        <h1 class="text-lg font-semibold">Add account</h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                      </details>
+                                    </div>
+                                    <i onclick="settingClick()" class="mt-6 fa-solid fa-gear fa-xl" style="color: #ffffff;"></i>
+                                </div>
+                            </div>
+                        </nav>
+                        <div>
+                            <ul class="menu text-white space-y-3 -mt-28">
+                                <!-- 1 -->
+                                <div onclick="chats()" class="flex justify-between items-center">
+                                    <div class="flex items-center gap-3">
+                                        <button class="btn rounded-2xl bg-[#565657] border border-[#565657]"><i class="fa-solid fa-comment" style="color: #ffffff;"></i></button>
+                                        <h4 class="text-base">Chats</h4>
+                                    </div>
+                                    <button class="bg-blue-500 rounded-full px-1">10</button>
+                                </div>
+                                <!-- 2 -->
+                                <div class="flex items-center gap-3">
+                                    <button class="btn rounded-2xl bg-[#565657] border border-[#565657]"><i class="fa-solid fa-store" style="color: #ffffff;"></i></button>
+                                    <h4 class="text-base">Marketplace</h4>
+                                </div>
+                                <!-- 3 -->
+                                <div class="flex items-center gap-3">
+                                    <button class="btn rounded-2xl bg-[#565657] border border-[#565657]"><i class="fa-solid fa-comment-dots" style="color: #ffffff;"></i></button>
+                                    <h4 class="text-base">Message requests</h4>
+                                </div>
+                                <!-- 4 -->
+                                <div class="flex items-center gap-3">
+                                    <button class="btn rounded-2xl bg-[#565657] border border-[#565657]"><i class="fa-solid fa-box-archive" style="color: #ffffff;"></i></button>
+                                    <h4 class="text-base">Archive</h4>
+                                </div>
+                              </ul>
+                        </div>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                  <h1 class="text-2xl font-bold text-white">Calls</h1>
+            </div>
+            <!-- right site item -->
+            <div class="flex gap-4">
+                <button class="btn bg-[#272829] border border-[#272829] rounded-full" >
+                    <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+                </button>
+                <button class="btn bg-[#272829] border border-[#272829] rounded-full">
+                    <i class="fa-solid fa-video" style="color: #ffffff;"></i>
+                </button>
+
+                  
+            </div>
+
+        </div>
+        
+    </nav>
+    <h3 class="text-[#646464] font-semibold text-sm my-4">Recents</h3>
+
+    <main class="space-y-3">
+        
+         <!-- 1 -->
+        <div class="flex justify-between items-center ">
+            <div class="flex items-center gap-2">
+                <div class="relative w-fit">
+                    <img class="rounded-full h-10 w-10" src="images/Shovo vaiya.jpg" alt="">
+                    <h1 class="absolute bottom-0 right-0 bg-green-500 rounded-full w-4 h-4 border-2 border-black"></h1>
+                </div>
+                <div>
+                    <h1 class="text-base font-medium text-white">Badrul Haider</h1>
+                    <div class="flex gap-1 text-xs text-[#b5b5b6]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-red-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 3.75L18 6m0 0l2.25 2.25M18 6l2.25-2.25M18 6l-2.25 2.25m1.5 13.5c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                      </svg>
+                      <p><span class="text-red-600">Missed</span> 7:04 PM</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn rounded-full w-12 h-10 bg-[#343435] border-4 border-black"><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i></button>
+        </div>
+         <!-- 2 -->
+        <div class="flex justify-between items-center ">
+            <div class="flex items-center gap-2">
+                <div class="relative w-fit">
+                    <img class="rounded-full h-10 w-10" src="images/mahim fnd.jpg" alt="">
+                    <h1 class="absolute bottom-0 right-0 bg-green-500 rounded-full w-4 h-4 border-2 border-black"></h1>
+                </div>
+                <div>
+                    <h1 class="text-base font-medium text-white">Mahedi Mahin</h1>
+                    <div class="flex gap-1 text-xs text-[#b5b5b6]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-[#4d4c4c]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0l-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                          </svg>
+                      <p><span class="text-[#4d4c4c]">Outgoing</span> 6:51 PM</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn rounded-full w-12 h-10 bg-[#343435] border-4 border-black"><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i></button>
+        </div>
+         <!-- 3 -->
+        <div class="flex justify-between items-center ">
+            <div class="flex items-center gap-2">
+                <div class="relative w-fit">
+                    <img class="rounded-full h-10 w-10" src="images/mahim fnd.jpg" alt="">
+                    <h1 class="absolute bottom-0 right-0 bg-green-500 rounded-full w-4 h-4 border-2 border-black"></h1>
+                </div>
+                <div>
+                    <h1 class="text-base font-medium text-white">Mahedi Mahin</h1>
+                    <div class="flex gap-1 text-xs text-[#b5b5b6]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-red-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 3.75L18 6m0 0l2.25 2.25M18 6l2.25-2.25M18 6l-2.25 2.25m1.5 13.5c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                      </svg>
+                      <p><span class="text-red-600">Missed</span> 6:50 PM</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn rounded-full w-12 h-10 bg-[#343435] border-4 border-black"><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i></button>
+        </div>
+         <!-- 4 -->
+        <div class="flex justify-between items-center ">
+            <div class="flex items-center gap-2">
+                <div class="relative w-fit">
+                    <img class="rounded-full h-10 w-10" src="images/tawfiq fnd.jpg" alt="">
+                    <h1 class="absolute bottom-0 right-0 bg-green-500 rounded-full w-4 h-4 border-2 border-black"></h1>
+                </div>
+                <div>
+                    <h1 class="text-base font-medium text-white">Towhidul Islam (3)</h1>
+                    <div class="flex gap-1 text-xs text-[#b5b5b6]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-[#4d4c4c]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0l-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                          </svg>
+                      <p><span class="text-[#4d4c4c]">Outgoing</span> 7:04 PM</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn rounded-full w-12 h-10 bg-[#343435] border-4 border-black"><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i></button>
+        </div>
+         <!-- 5 -->
+        <div class="flex justify-between items-center ">
+            <div class="flex items-center gap-2">
+                <div class="relative w-fit">
+                    <img class="rounded-full h-10 w-10" src="images/tawfiq fnd.jpg" alt="">
+                    <h1 class="absolute bottom-0 right-0 bg-green-500 rounded-full w-4 h-4 border-2 border-black"></h1>
+                </div>
+                <div>
+                    <h1 class="text-base font-medium text-white">Towhidul Islam</h1>
+                    <div class="flex gap-1 text-xs text-[#b5b5b6]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-red-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 3.75L18 6m0 0l2.25 2.25M18 6l2.25-2.25M18 6l-2.25 2.25m1.5 13.5c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                      </svg>
+                      <p><span class="text-red-600">Missed</span> 7:04 PM</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn rounded-full w-12 h-10 bg-[#343435] border-4 border-black"><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i></button>
+        </div>
+         <!--6 -->
+        <div class="flex justify-between items-center ">
+            <div class="flex items-center gap-2">
+                <div class="relative w-fit">
+                    <img class="rounded-full h-10 w-10" src="images/arfat  vaiya.jpg" alt="">
+                    <h1 class="absolute bottom-0 right-0 bg-green-500 rounded-full w-4 h-4 border-2 border-black"></h1>
+                </div>
+                <div>
+                    <h1 class="text-base font-medium text-white">Saiyem Arfat</h1>
+                    <div class="flex gap-1 text-xs text-[#b5b5b6]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-[#4d4c4c]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0l-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                          </svg>
+                      <p><span class="text-[#4d4c4c]">Outgoing</span> 7:04 PM</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn rounded-full w-12 h-10 bg-[#343435] border-4 border-black"><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i></button>
+        </div>
+         <!-- 1 -->
+        <div class="flex justify-between items-center ">
+            <div class="flex items-center gap-2">
+                <div class="relative w-fit">
+                    <img class="rounded-full h-10 w-10" src="images/arfat  vaiya.jpg" alt="">
+                    <h1 class="absolute bottom-0 right-0 bg-green-500 rounded-full w-4 h-4 border-2 border-black"></h1>
+                </div>
+                <div>
+                    <h1 class="text-base font-medium text-white">Saiyem Arfat</h1>
+                    <div class="flex gap-1 text-xs text-[#b5b5b6]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-red-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 3.75L18 6m0 0l2.25 2.25M18 6l2.25-2.25M18 6l-2.25 2.25m1.5 13.5c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                      </svg>
+                      <p><span class="text-red-600">Missed</span> 7:04 PM</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn rounded-full w-12 h-10 bg-[#343435] border-4 border-black"><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i></button>
+        </div>
+         <!-- 1 -->
+        <div class="flex justify-between items-center ">
+            <div class="flex items-center gap-2">
+                <div class="relative w-fit">
+                    <img class="rounded-full h-10 w-10" src="images/Shovo vaiya.jpg" alt="">
+                    <h1 class="absolute bottom-0 right-0 bg-green-500 rounded-full w-4 h-4 border-2 border-black"></h1>
+                </div>
+                <div>
+                    <h1 class="text-base font-medium text-white">Badrul Haider</h1>
+                    <div class="flex gap-1 text-xs text-[#b5b5b6]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-red-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 3.75L18 6m0 0l2.25 2.25M18 6l2.25-2.25M18 6l-2.25 2.25m1.5 13.5c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                      </svg>
+                      <p><span class="text-red-600">Missed</span> 7:04 PM</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn rounded-full w-12 h-10 bg-[#343435] border-4 border-black"><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i></button>
+        </div>
+         <!-- 1 -->
+        <div class="flex justify-between items-center ">
+            <div class="flex items-center gap-2">
+                <div class="relative w-fit">
+                    <img class="rounded-full h-10 w-10" src="images/Shovo vaiya.jpg" alt="">
+                    <h1 class="absolute bottom-0 right-0 bg-green-500 rounded-full w-4 h-4 border-2 border-black"></h1>
+                </div>
+                <div>
+                    <h1 class="text-base font-medium text-white">Badrul Haider</h1>
+                    <div class="flex gap-1 text-xs text-[#b5b5b6]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-red-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 3.75L18 6m0 0l2.25 2.25M18 6l2.25-2.25M18 6l-2.25 2.25m1.5 13.5c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                      </svg>
+                      <p><span class="text-red-600">Missed</span> 7:04 PM</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn rounded-full w-12 h-10 bg-[#343435] border-4 border-black"><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i></button>
+        </div>
+         <!-- 1 -->
+        <div class="flex justify-between items-center ">
+            <div class="flex items-center gap-2">
+                <div class="relative w-fit">
+                    <img class="rounded-full h-10 w-10" src="images/Shovo vaiya.jpg" alt="">
+                    <h1 class="absolute bottom-0 right-0 bg-green-500 rounded-full w-4 h-4 border-2 border-black"></h1>
+                </div>
+                <div>
+                    <h1 class="text-base font-medium text-white">Badrul Haider</h1>
+                    <div class="flex gap-1 text-xs text-[#b5b5b6]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-red-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 3.75L18 6m0 0l2.25 2.25M18 6l2.25-2.25M18 6l-2.25 2.25m1.5 13.5c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                      </svg>
+                      <p><span class="text-red-600">Missed</span> 7:04 PM</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn rounded-full w-12 h-10 bg-[#343435] border-4 border-black"><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i></button>
+        </div>
+
+
+    </main>
+    <footer class="absolute bottom-0 flex justify-between px-4 py-2 bg-black w-full -mx-4">
+
+        <!-- chats -->
+    <div onclick="chats()"  class="text-center">
+        <div class="relative w-fit">
+            <i class="fa-solid fa-comment fa-xl" style="color: #818181;"></i>
+            <h1 class="absolute -top-1 -right-1 bg-[#ff2121] rounded-full w-fit h-4 border-2 border-black text-white text-[10px] px-1 font-semibold flex items-center">2</h1>
+        </div>
+        <h1 class="text-sm font-medium text-[#818181]">Chats</h1>
+    </div>
+    <!-- call -->
+    <div onclick="call()"  class="text-center">
+        <i class="fa-solid fa-video fa-xl" style="color: #0400ff;"></i>
+        <h1 class="text-sm font-medium text-[#0400ff]">Calls</h1>
+    </div>
+    <!-- people -->
+    <div class="text-center">
+        <i class="fa-solid fa-user-group fa-xl" style="color: #818181;"></i>
+        <h1 class="text-sm font-medium text-[#818181]">People</h1>
+    </div>
+    <!-- stories -->
+    <div  class="text-center">
+        <i class="fa-solid fa-square fa-xl" style="color: #818181;"></i>
+        <h1 class="text-sm font-medium text-[#818181]">Stories</h1>
+    </div>
+    
+</footer>
+<script>
+
+    // Abir
+            const chats = () =>{
+                window.location.href = "index.html"
+            }
+</script>
+
+</body>
+</html>
